@@ -1,21 +1,24 @@
 estudiantes = []
 
+def validar_nota(nota):
+    if nota < 0 or nota > 10:
+        print("Nota incorrecta")
+        return False
+    return True
+
 
 def registrar_estudiante(nombre, nota1, nota2, nota3):
     if nombre == "":
         print("Nombre incorrecto")
         return
 
-    if nota1 < 0 or nota1 > 10:
-        print("Nota incorrecta")
+    if not validar_nota(nota1):
         return
 
-    if nota2 < 0 or nota2 > 10:
-        print("Nota incorrecta")
+    if not validar_nota(nota2):
         return
 
-    if nota3 < 0 or nota3 > 10:
-        print("Nota incorrecta")
+    if not validar_nota(nota3):
         return
 
     suma = nota1 + nota2 + nota3

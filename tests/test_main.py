@@ -23,3 +23,27 @@ def test_estado_aprobado():
 
 def test_estado_reprobado():
     assert determinar_estado(18) == "REPROBADO"
+
+from gestor_estudiantes import (
+    obtener_estudiantes,
+    registrar_estudiante,
+)
+
+def test_registrar_estudiante():
+    obtener_estudiantes().clear()
+
+    registrar_estudiante("Pedro", 8, 8, 8)
+
+    estudiantes = obtener_estudiantes()
+
+    assert len(estudiantes) == 1
+    assert estudiantes[0]["nombre"] == "Pedro"
+    assert estudiantes[0]["estado"] == "APROBADO"
+
+def test_registrar_estudiante_invalido():
+    obtener_estudiantes().clear()
+
+    registrar_estudiante("", 8, 8, 8)
+
+    assert len(obtener_estudiantes()) == 0
+    

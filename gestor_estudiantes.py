@@ -81,3 +81,6 @@ def buscar_estudiante(nombre):
 
     if encontrado == False:
         print("Estudiante no encontrado")
+
+def obtener_estudiantes():
+    return estudiantes

@@ -17,7 +17,9 @@ def calcular_suma(nota1, nota2, nota3):
     return nota1 + nota2 + nota3
 
 def determinar_estado(suma):
-    if suma >= NOTA_MINIMA_APROBACION:
+    if suma >= 28:
+        return "EXCELENTE"
+    elif suma >= NOTA_MINIMA_APROBACION:
         return "APROBADO"
     return "REPROBADO"
 

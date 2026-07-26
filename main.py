@@ -1,24 +1,11 @@
 estudiantes = []
 NOTA_MINIMA_APROBACION = 24
-from gestor_estudiantes import validar_nota
-
-
-def determinar_estado(suma):
-    if suma >= NOTA_MINIMA_APROBACION:
-        return "APROBADO"
-    return "REPROBADO"
-
-
-def calcular_suma(nota1, nota2, nota3):
-    return nota1 + nota2 + nota3
-
-
-def validar_nombre(nombre):
-    if nombre.strip() == "":
-        print("Nombre incorrecto")
-        return False
-    return True
-
+from gestor_estudiantes import (
+    validar_nota,
+    validar_nombre,
+    calcular_suma,
+    determinar_estado,
+)
 
 def registrar_estudiante(nombre, nota1, nota2, nota3):
     if not validar_nombre(nombre):

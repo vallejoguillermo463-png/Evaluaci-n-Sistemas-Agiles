@@ -17,9 +17,15 @@ def calcular_suma(nota1, nota2, nota3):
     return nota1 + nota2 + nota3
 
 
-def registrar_estudiante(nombre, nota1, nota2, nota3):
-    if nombre == "":
+def validar_nombre(nombre):
+    if nombre.strip() == "":
         print("Nombre incorrecto")
+        return False
+    return True
+
+
+def registrar_estudiante(nombre, nota1, nota2, nota3):
+    if not validar_nombre(nombre):
         return
 
     if not validar_nota(nota1):

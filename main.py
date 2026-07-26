@@ -1,11 +1,6 @@
 estudiantes = []
 NOTA_MINIMA_APROBACION = 24
-
-def validar_nota(nota):
-    if nota < 0 or nota > 10:
-        print("Nota incorrecta")
-        return False
-    return True
+from gestor_estudiantes import validar_nota
 
 
 def determinar_estado(suma):

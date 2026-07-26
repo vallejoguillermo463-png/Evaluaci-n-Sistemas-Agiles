@@ -13,6 +13,10 @@ def determinar_estado(suma):
     return "REPROBADO"
 
 
+def calcular_suma(nota1, nota2, nota3):
+    return nota1 + nota2 + nota3
+
+
 def registrar_estudiante(nombre, nota1, nota2, nota3):
     if nombre == "":
         print("Nombre incorrecto")
@@ -27,7 +31,7 @@ def registrar_estudiante(nombre, nota1, nota2, nota3):
     if not validar_nota(nota3):
         return
 
-    suma = nota1 + nota2 + nota3
+    suma = calcular_suma(nota1, nota2, nota3)
 
     estado = determinar_estado(suma)
 

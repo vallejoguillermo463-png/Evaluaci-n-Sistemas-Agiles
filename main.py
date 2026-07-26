@@ -1,4 +1,5 @@
 estudiantes = []
+NOTA_MINIMA_APROBACION = 24
 
 def validar_nota(nota):
     if nota < 0 or nota > 10:
@@ -8,7 +9,7 @@ def validar_nota(nota):
 
 
 def determinar_estado(suma):
-    if suma >= 24:
+    if suma >= NOTA_MINIMA_APROBACION:
         return "APROBADO"
     return "REPROBADO"
 

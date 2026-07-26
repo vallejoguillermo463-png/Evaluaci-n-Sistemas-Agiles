@@ -1,7 +1,7 @@
 estudiantes = []
 
 
-def p(nombre, nota1, nota2, nota3):
+def registrar_estudiante(nombre, nota1, nota2, nota3):
     if nombre == "":
         print("Nombre incorrecto")
         return
@@ -37,7 +37,7 @@ def p(nombre, nota1, nota2, nota3):
     print("Estudiante registrado")
 
 
-def l():
+def listar_estudiantes():
     if len(estudiantes) == 0:
         print("No existen estudiantes")
     else:
@@ -53,7 +53,7 @@ def l():
             )
 
 
-def buscar(nombre):
+def buscar_estudiante(nombre):
     encontrado = False
 
     for e in estudiantes:
@@ -72,10 +72,10 @@ def buscar(nombre):
         print("Estudiante no encontrado")
 
 
-p("Ana", 8, 8, 8)
-p("Luis", 6, 6, 6)
-p("Carlos", 10, 9, 8)
+registrar_estudiante("Ana", 8, 8, 8)
+registrar_estudiante("Luis", 6, 6, 6)
+registrar_estudiante("Carlos", 10, 9, 8)
 
-l()
+listar_estudiantes()
 
-buscar("Ana")
+buscar_estudiante("Ana")
